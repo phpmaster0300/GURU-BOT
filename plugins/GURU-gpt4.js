@@ -31,7 +31,7 @@ handler.command = /^(gpt4)$/i
 export default handler
 
 async function typewriterEffect(conn, quoted ,from, text) {
-    let { key } = await conn.sendMessage(from, { text: 'Thinking...' } , {quoted:quoted})
+    let { key } = await conn.sendMessage(from, { text: 'Wait...' } , {quoted:quoted})
   
     for (let i = 0; i < text.length; i++) {
       const noobText = text.slice(0, i + 1);
